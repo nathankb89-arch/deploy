@@ -1,0 +1,78 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr; /* Four columns for a wider look */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 60px;
+}
+
+.btn-accent {
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+.btn-accent:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 20px var(--accent);
+}
+.project-item {
+    background: var(--card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 10px 30px rgba(204, 255, 0, 0.15); /* Soft lime glow */
+    border-color: var(--accent);
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 3.5rem; /* Larger hero text */
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+}
+
+.hero-card span {
+    color: var(--accent);
+    background: #000;
+    padding: 2px 12px;
+    border-radius: 8px; /* Slightly rounded highlight */
+}
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(26, 26, 26, 0.8); /* Semi-transparent charcoal */
+    backdrop-filter: blur(15px); /* This creates the "frosted glass" look */
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+}

@@ -1,0 +1,70 @@
+/* WELCOME PAGE */
+.welcome {
+  position: relative;
+  height: 100vh;
+
+  background: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3') center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 6, 23, 0.75);
+}
+
+/* CONTENT */
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.welcome-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.welcome-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #cbd5f5;
+}
+
+/* BUTTON IMPROVEMENT */
+.btn {
+  padding: 14px 30px;
+  font-size: 1rem;
+}
+
+/* BUTTON HOVER GLOW */
+.btn:hover {
+  box-shadow: 0 0 20px #22c55e;
+}
+
+/* TEXT ANIMATION */
+.welcome-content h1 {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.welcome-content p {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform:translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
